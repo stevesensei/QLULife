@@ -11,7 +11,7 @@ qcloudSDK.config({
 
 qcloudSDK.request('RefreshCdnDir', {
   // See https://cloud.tencent.com/document/api/228/3947
-  'dirs.0': 'https://lruihao.cn/',
+  'dirs.0': 'https://qlu.life/',
   'type': 2
 }, (res) => {
   res.code && console.log(res)
