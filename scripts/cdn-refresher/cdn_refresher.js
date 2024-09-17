@@ -1,18 +1,36 @@
-/**
- * 缓存刷新脚本
- * @command `node qcloudcdn.js $SECRET_ID $SECRET_KEY` 
- */
-const qcloudSDK = require('qcloud-cdn-node-sdk');
+// Depends on tencentcloud-sdk-nodejs version 4.0.3 or higher
+const tencentcloud = require("tencentcloud-sdk-nodejs-cdn");
 
-qcloudSDK.config({
-  secretId: process?.argv[2],
-  secretKey: process?.argv[3]
-})
+const CdnClient = tencentcloud.cdn.v20180606.Client;
+const args = process.argv.slice(2);
 
-qcloudSDK.request('RefreshCdnDir', {
-  // See https://cloud.tencent.com/document/api/228/3947
-  'dirs.0': 'https://qlu.life/',
-  'type': 2
-}, (res) => {
-  res.code && console.log(res)
-})
+const clientConfig = {
+  credential: {
+    secretId: args[0],
+    secretKey: args[1],
+  },
+  region: "",
+  profile: {
+    httpProfile: {
+      endpoint: "cdn.tencentcloudapi.com",
+    },
+  },
+};
+
+// 实例化要请求产品的client对象,clientProfile是可选的
+const client = new CdnClient(clientConfig);
+const params = {
+    "Paths": [
+        "https://qlu.life/"
+    ],
+    "FlushType": "delete",
+    "Area": "mainland"
+};
+client.PurgePathCache(params).then(
+  (data) => {
+    console.log(data);
+  },
+  (err) => {
+    console.error("运行错误:", err);
+  }
+);

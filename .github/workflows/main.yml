@@ -20,7 +20,7 @@ jobs:
     - name: 上传
       run: coscmd upload -rs --delete -f ./ / --ignore "./.git/*"
     - name: 安装依赖
-      run: npm install qcloud-cdn-node-sdk
+      run: npm install tencentcloud-sdk-nodejs-cdn
       working-directory: ./scripts/cdn-refresher
     - name: 刷新CDN缓存
       env:
