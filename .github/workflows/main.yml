@@ -22,4 +22,4 @@ jobs:
     - name: 打开脚本目录
       run: cd scripts/cdn-refresher
     - name: 刷新CDN缓存
-      run: npm run qcloudcdn
+      run: npm install qcloud-cdn-node-sdk && npm run qcloudcdn
