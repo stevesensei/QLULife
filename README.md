@@ -15,3 +15,45 @@
 希望你能在这份文档中找到你需要的内容,齐鲁工业大学欢迎你的到来!
 
 ## 参与贡献
+
+您可以fork本项目,创建一个新的分支并写入新的内容,随后提出一个pull request
+
+(因为特定原因,我们并不支持评论区功能)
+
+以下为常用的内部格式
+
+***
+
+### 基本markdown格式
+
+您需要学习markdown以编辑内容,请查看
+
+[教程](https://www.jianshu.com/p/1e402922ee32/)
+
+### docsify文档助手
+
+我们使用docsify进行编辑,其支持一些特定的文件格式
+
+[教程](https://docsify.js.org/#/zh-cn/helpers)
+
+### 小剧场
+
+我们会在文档编写的时候加入丰富的小剧场内容,具体的教程请查看下面
+
+[请查看连接](https://github.com/xueelf/docsify-chat/blob/master/README.zh.md)
+
+以下为样式结果
+
+<!-- chat:start -->
+
+<!-- title:小剧场测试 -->
+
+#### **学长**
+
+测试
+
+#### **学妹(假想)**
+
+?
+
+<!-- chat:end -->
