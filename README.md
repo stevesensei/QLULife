@@ -4,7 +4,7 @@
 
 ## 声明
 
-本文档项目发起者为齐鲁工业大学(山东省科学院)所属学生,并在[github](https://github.com/stevesensei/QLULife)平台开源,参与贡献内容者为github平台用户,与齐鲁工业大学(山东省科学院)个体及所属组织/团体/其他个人没有任何关系
+本文档项目发起者为齐鲁工业大学(山东省科学院)所属学生,并在[github](https://github.com/stevesensei/QLULife)平台开源,参与贡献内容者为github平台用户,与齐鲁工业大学(山东省科学院)个体及所属组织/团体没有任何关系
 
 如有不合时宜的内容,请通过github或邮件联系项目发起者删除: stevesensei@163.com
 
