@@ -21,5 +21,7 @@ jobs:
       run: coscmd upload -rs --delete -f ./ / --ignore "./.git/*"
     - name: 打开脚本目录
       run: cd scripts/cdn-refresher
+    - name: 安装依赖
+      run: npm install qcloud-cdn-node-sdk
     - name: 刷新CDN缓存
-      run: npm install qcloud-cdn-node-sdk && npm run qcloudcdn
+      run: npm run qcloudcdn
