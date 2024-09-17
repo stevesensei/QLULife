@@ -20,7 +20,7 @@ jobs:
     - name: 上传
       run: coscmd upload -rs --delete -f ./ / --ignore "./.git/*"
     - name: 打开脚本目录
-      run: cd scripts/cdn-refresher
+      working-directory: ./scripts/cdn-refresher
     - name: 安装依赖
       run: npm install qcloud-cdn-node-sdk
     - name: 刷新CDN缓存
