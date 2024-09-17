@@ -19,6 +19,7 @@ jobs:
       run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
     - name: 上传
       run: coscmd upload -rs --delete -f ./ / --ignore "./.git/*"
-    - name: 刷新CDN缓存
+    - name: 打开脚本目录
       run: cd scripts/cdn-refresher
+    - name: 刷新CDN缓存
       run: npm run qcloudcdn
