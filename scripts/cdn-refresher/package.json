@@ -1,0 +1,5 @@
+{
+    "scripts": {
+      "qcloudcdn": "node ./cdn_refresher.js $SECRET_ID $SECRET_KEY"
+    }
+}
